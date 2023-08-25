@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    @include mi-text(Basker Classico, serif, bold, 30px, center,map-get($map: $palette, $key: azul-fr));
+    
+}
