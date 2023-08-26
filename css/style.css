@@ -44,26 +44,34 @@
   justify-content: space-around;
 }
 
+.bg-text, h1, p {
+  background-color: rgba(242, 242, 242, 0.6862745098);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1 {
+p {
   font-family: Basker Classico, serif;
   font-weight: bold;
+  font-size: 20px;
+  text-align: start;
+  color: #113E59;
+}
+
+h1 {
+  font-family: gil_sans_mt, sans-serif;
+  font-weight: normal;
   font-size: 30px;
   text-align: center;
   color: #113E59;
 }
 
-p {
-  font-family: gil_sans_mt, sans-serif;
-  font-weight: normal;
-  font-size: 20px;
-  text-align: start;
-  color: #113E59;
+body {
+  background-color: #D9AC59;
 }
 
 .mi-header {

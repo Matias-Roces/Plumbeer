@@ -6,3 +6,6 @@
     display: flex;
     justify-content: space-around;
 }
+.bg-text {
+    background-color: map-get($map: $palette, $key: gris-claro);
+}
