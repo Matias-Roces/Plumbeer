@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 h1 {
-    @include mi-text(Basker Classico, serif, bold, 30px, center,map-get($map: $palette, $key: azul-fr));
+    @include mi-text(Basker Classico, serif, bold, 30px, center, map-get($map: $palette, $key: azul-fr));
     
+}
+p {
+    @include mi-text(gil_sans_mt, sans-serif, normal, 20px, start, map-get($map: $palette, $key: azul-fr))
 }

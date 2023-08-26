@@ -14,6 +14,26 @@
   font-family: Basker Classico I;
   src: url(../../resources/fonts/basker_classico_italic.TTF);
 }
+@font-face {
+  font-family: Gill Sans MT;
+  src: url(../../resources/fonts/gil_sans_mt.TTF);
+}
+@font-face {
+  font-family: Gill Sans MTB;
+  src: url(../../resources/fonts/gil_sans_mt_bold.TTF);
+}
+@font-face {
+  font-family: Gill Sans MTC;
+  src: url(../../resources/fonts/gil_sans_mt_condensed.TTF);
+}
+@font-face {
+  font-family: Gill Sans MTL;
+  src: url(../../resources/fonts/gil_sans_mt_light.TTF);
+}
+@font-face {
+  font-family: Gill Sans MTI;
+  src: url(../../resources/fonts/gil_sans_mt_italic.TTF);
+}
 .displayflex-justifycontentcenter {
   display: flex;
   justify-content: center;
@@ -38,6 +58,14 @@ h1 {
   color: #113E59;
 }
 
+p {
+  font-family: gil_sans_mt, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: start;
+  color: #113E59;
+}
+
 .mi-header {
   font-family: Basker Classico B, sans-serif;
   font-weight: bold;
@@ -48,6 +76,7 @@ h1 {
   background-color: #0388A6;
   height: 120px;
   position: fixed;
+  z-index: 50;
   width: 100vw;
 }
 
