@@ -45,7 +45,7 @@
 }
 
 .bg-text, h1, p {
-  background-color: rgba(242, 242, 242, 0.6862745098);
+  background-color: #B7B7B7;
 }
 
 * {
@@ -59,7 +59,7 @@ p {
   font-weight: bold;
   font-size: 20px;
   text-align: start;
-  color: #113E59;
+  color: #103558;
 }
 
 h1 {
@@ -67,11 +67,11 @@ h1 {
   font-weight: normal;
   font-size: 30px;
   text-align: center;
-  color: #113E59;
+  color: #103558;
 }
 
 body {
-  background-color: #D9AC59;
+  background-color: #F9a21b;
 }
 
 .mi-header {
@@ -79,27 +79,49 @@ body {
   font-weight: bold;
   font-size: 22px;
   text-align: start;
-  color: #BFBFBF;
+  color: #B7B7B7;
   text-transform: uppercase;
-  background-color: #0388A6;
-  height: 120px;
+  background-color: #103558;
+  height: 100px;
   position: fixed;
   z-index: 50;
   width: 100vw;
+  color: #F9a21b;
 }
 
 .logo {
-  height: 150px;
+  margin-left: 10px;
+  object-fit: center;
+  height: 100%;
   width: auto;
+}
+.logo img {
+  scale: 115%;
 }
 
 .after-header {
   margin-top: 120px;
 }
 
+.mi-header-burger {
+  background: linear-gradient(to bottom, #103558, rgba(16, 53, 88, 0.7333333333), rgba(16, 53, 88, 0.3333333333));
+  padding: 40px;
+  width: 100vw;
+  padding-right: 80px;
+}
+
+.header-align {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 footer {
   height: 300px;
-  background-color: #BFBFBF;
+  background-color: #B7B7B7;
+  color: #F9a21b;
 }
 
 /*# sourceMappingURL=style.css.map */
