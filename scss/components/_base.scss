@@ -6,8 +6,16 @@
 p {
     @include mi-text(Basker Classico, serif, bold, 20px, start, map-get($map: $palette, $key: azul));
     @extend .bg-text;
+    margin: 0;
+    padding: 10px 0px;
 }
 h1 {
     @include mi-text(gil_sans_mt, sans-serif, normal, 30px, center, map-get($map: $palette, $key: azul));
     @extend .bg-text;
+    margin: 0;
+    padding: 10px 0px;
+}
+main, section {
+    margin: 0;
+    padding: 0;
 }

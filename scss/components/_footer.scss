@@ -1,4 +1,5 @@
 footer {
+    margin-top: 10px;
     height: 300px;
     background-color: map-get($map: $palette, $key: gris);
     color: map-get($map: $palette, $key: amarillo); 

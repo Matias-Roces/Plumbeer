@@ -34,7 +34,7 @@
   font-family: Gill Sans MTI;
   src: url(../../resources/fonts/gil_sans_mt_italic.TTF);
 }
-.displayflex-justifycontentcenter {
+.displayflex-justifycontentcenter, .gallery-body {
   display: flex;
   justify-content: center;
 }
@@ -60,6 +60,8 @@ p {
   font-size: 20px;
   text-align: start;
   color: #103558;
+  margin: 0;
+  padding: 10px 0px;
 }
 
 h1 {
@@ -68,6 +70,13 @@ h1 {
   font-size: 30px;
   text-align: center;
   color: #103558;
+  margin: 0;
+  padding: 10px 0px;
+}
+
+main, section {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -77,16 +86,16 @@ body {
 .mi-header {
   font-family: Basker Classico B, sans-serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 15px;
   text-align: start;
   color: #B7B7B7;
   text-transform: uppercase;
   background-color: #103558;
-  height: 100px;
+  height: 130px;
   position: fixed;
   z-index: 50;
   width: 100vw;
-  color: #F9a21b;
+  color: #F9a21b !important;
 }
 
 .logo {
@@ -101,6 +110,11 @@ body {
 
 .after-header {
   margin-top: 120px;
+}
+
+.anim-header-text {
+  transition: 0.3s;
+  color: #F9a21b;
 }
 
 .mi-header-burger {
@@ -119,9 +133,108 @@ body {
 }
 
 footer {
+  margin-top: 10px;
   height: 300px;
   background-color: #B7B7B7;
   color: #F9a21b;
+}
+
+.anim-header-text:hover {
+  color: #B7B7B7;
+  text-shadow: 0 0 15px #F9a21b;
+}
+
+:root {
+  --dark: #333;
+  --light: #fff ;
+}
+
+.gallery-body {
+  flex-direction: row;
+  height: 640px;
+  align-items: center;
+  overflow: hidden;
+  transition: auto 0.5s;
+  background: var(--dark);
+}
+.gallery-body .gallery-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
+  height: 400px;
+  border-radius: 25px;
+}
+.gallery-body .gallery-section .gallery-image {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  background-size: auto 100%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);
+  background-image: url("../../resources/images/matias.jpg");
+}
+.gallery-body .gallery-section .gallery-image .gallery-label {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  justify-content: center;
+}
+.gallery-body .gallery-section .gallery-image .gallery-label .gallery-icon {
+  width: 20%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.gallery-body .gallery-section .gallery-image .gallery-label .gallery-icon i {
+  padding: 10px;
+  text-align: center;
+  color: #F9a21b;
+}
+.gallery-body .gallery-section .gallery-image p {
+  background: none;
+  font-size: 15px;
+  color: #F9a21b;
+  text-align: center;
+}
+.gallery-body .gallery-section .gallery-image.active {
+  flex-grow: 10000;
+  transform: scale(1.1);
+  max-width: 600px;
+  margin: 0;
+  border-radius: 25px;
+  background-size: 100% auto;
+}
+.gallery-body .gallery-section .gallery-image.active .gallery-label {
+  background: var(--dark);
+  padding: 10px;
+  border-radius: 50px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+}
+.gallery-body .gallery-section .gallery-image.active .gallery-label .gallery-info .gallery-main-info, .gallery-body .gallery-section .gallery-image.active .gallery-label .gallery-info .gallery-sub-info {
+  text-align: start;
+}
+.gallery-body .gallery-section .gallery-image:not(.active) {
+  flex-grow: 1;
+  border-radius: 25px;
+}
+.gallery-body .gallery-section .gallery-image:not(.active) .gallery-label {
+  bottom: 10px;
+  left: 10px;
+}
+.gallery-body .gallery-section .gallery-image:not(.active) .gallery-label .gallery-info {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

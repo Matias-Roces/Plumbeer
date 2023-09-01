@@ -1,0 +1,97 @@
+
+:root {
+    --dark: #333;
+    --light: #fff
+}
+
+.gallery-body {
+    @extend .displayflex-justifycontentcenter;
+    flex-direction: row;    
+    height: 640px;
+    align-items: center;
+    overflow: hidden;
+    transition: auto 0.5s;
+    background: var(--dark);
+    .gallery-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: stretch;
+        overflow: hidden;
+        min-width: 600px;
+        max-width: 900px;
+        width: calc(100% - 100px);
+        height: 400px;
+        border-radius: 25px;
+        .gallery-image {
+            display: flex;
+            justify-content: center;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            min-width: 60px;
+            margin: 10px;
+            background-size: auto 100%;
+            background-position: center;
+            cursor: pointer;
+            transition: 0.5s cubic-bezier(0.1,0.1,0.1,0.1);
+            background-image: url('../../resources/images/matias.jpg');
+            .gallery-label{
+                display: flex;
+                position: absolute;
+                width: 80%;
+                justify-content: center;
+                .gallery-icon{
+                    width: 20%;
+                    font-size: 1.5rem;
+                    display: flex;
+                    justify-content: center;
+                    i {                        
+                        padding: 10px;
+                        text-align: center;
+                        color: map-get($map: $palette, $key: amarillo);
+
+                    }
+                }
+            }
+            p {
+                background: none;
+                font-size: 15px;
+                color: map-get($map: $palette, $key: amarillo);
+                text-align: center;
+            }
+        }
+        .gallery-image.active {
+            flex-grow: 10000;
+            transform: scale(1.1);
+            max-width: 600px;
+            margin: 0;
+            border-radius: 25px;
+            background-size: 100% auto;
+            .gallery-label {
+                background: var(--dark);
+                padding: 10px;
+                border-radius: 50px;
+                bottom: 15px;
+                left: 15px; 
+                right: 15px;
+                .gallery-info {
+                    .gallery-main-info, .gallery-sub-info {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+        .gallery-image:not(.active) {
+            flex-grow: 1;
+            border-radius: 25px;
+            .gallery-label {
+                bottom: 10px;
+                left: 10px;
+                .gallery-info {
+                    display: none;
+                }
+            }
+        }
+    }
+}

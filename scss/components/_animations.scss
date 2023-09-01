@@ -1,0 +1,4 @@
+.anim-header-text:hover {
+    color: map-get($map: $palette, $key: gris);
+    text-shadow: 0 0 15px map-get($map: $palette, $key: amarillo);
+}

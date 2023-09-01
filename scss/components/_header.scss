@@ -1,12 +1,12 @@
 .mi-header {
-    @include mi-text(Basker Classico B, sans-serif, bold, 22px, start, map-get($map: $palette, $key: gris));
+    @include mi-text(Basker Classico B, sans-serif, bold, 15px, start, map-get($map: $palette, $key: gris));
     text-transform: uppercase;
     background-color: map-get($map: $palette, $key: azul);
-    height: 100px;    
+    height: 130px;    
     position: fixed;
     z-index: 50;
     width: 100vw;
-    color: map-get($map: $palette, $key: amarillo)
+    color: map-get($map: $palette, $key: amarillo) !important;
     //@include mi-text()
 }
 .logo {
@@ -21,11 +21,15 @@
 .after-header {
     margin-top: 120px;
 }
+.anim-header-text{
+    transition: 0.3s;
+    color: map-get($map: $palette, $key: amarillo);
+}
 .mi-header-burger{
     background: linear-gradient(to bottom, map-get($map: $palette, $key: azul), #103558bb, #10355855);
     padding: 40px;
     width: 100vw;    
-    padding-right: 80px;
+    padding-right: 80px;    
 }
 .header-align {
     margin: 0;
