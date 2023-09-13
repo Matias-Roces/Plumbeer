@@ -1,32 +1,29 @@
 .mi-header {
-    @include mi-text(Basker Classico B, sans-serif, bold, 15px, start, map-get($map: $palette, $key: gris));
+    @include mi-text(gil_sans_mt, sans-serif, bold, 15px, start, map-get($map: $palette, $key: gris));
     text-transform: uppercase;
-    background-color: map-get($map: $palette, $key: azul);
+    background-color: none;
     height: 130px;    
     position: fixed;
     z-index: 50;
     width: 100vw;
-    color: map-get($map: $palette, $key: amarillo) !important;
+    color: map-get($map: $palette, $key: gris) !important;
     //@include mi-text()
 }
 .logo {
     margin-left: 10px;
     object-fit: center;  
-    height: 100%;
-    width: auto;
-    img {
-        scale: 115%;
-    }    
+    height: auto;
+    width: 15vw;       
 }
 .after-header {
     margin-top: 120px;
 }
 .anim-header-text{
     transition: 0.3s;
-    color: map-get($map: $palette, $key: amarillo);
+    color: map-get($map: $palette, $key: gris);
 }
 .mi-header-burger{
-    background: linear-gradient(to bottom, map-get($map: $palette, $key: azul), #103558bb, #10355855);
+    background: none;
     padding: 40px;
     width: 100vw;    
     padding-right: 80px;    
@@ -36,5 +33,17 @@
     padding: 0;
     height: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+.redes {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+    i {
+        font-size: 25px;
+    }
 }
